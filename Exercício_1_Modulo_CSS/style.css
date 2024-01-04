@@ -11,10 +11,29 @@ header {
 }
 
 header .my-title {
+    font-size: 48px;
     margin: 15px;
     text-align: center;
 }
 
 .navegation {
-    display: inline;
+    margin-top: 50px;
+}
+
+.navegation ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navegation li {
+    text-align: center;
+}
+
+.navegation a {
+    margin: auto;
+    text-decoration: none;
+    color: beige;
+    cursor: pointer;
+    font-size: 18px;
 }
