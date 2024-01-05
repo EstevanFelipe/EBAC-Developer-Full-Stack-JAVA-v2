@@ -38,7 +38,7 @@ header .my-title {
     font-size: 18px;
 }
 
-.container-noticia1 {
+.container-mercado {
     background-color: rgba(0, 199, 167, 0.3);
     display: flex;
     justify-content: center;
@@ -47,7 +47,22 @@ header .my-title {
     height: 530px;
 }
 
-.container-noticia1 .card-container {
+.container-esportes {
+    background-color: rgba(255, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 530px;
+}
+
+.container-esportes .card-container {
+    margin: 20px;
+    width: 250px;
+    height: 400px;
+}
+
+.container-mercado .card-container {
     margin: 20px;
     width: 250px;
     height: 400px;
