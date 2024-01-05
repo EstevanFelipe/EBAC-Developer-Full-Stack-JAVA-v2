@@ -37,3 +37,30 @@ header .my-title {
     cursor: pointer;
     font-size: 18px;
 }
+
+.container-noticia1 {
+    background-color: rgba(0, 199, 167, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 530px;
+}
+
+.container-noticia1 .card-container {
+    width: 250px;
+    height: 380px;
+}
+
+.container-imagem {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.imagem {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
