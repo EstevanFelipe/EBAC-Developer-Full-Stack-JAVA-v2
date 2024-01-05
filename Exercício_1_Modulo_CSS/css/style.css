@@ -48,8 +48,9 @@ header .my-title {
 }
 
 .container-noticia1 .card-container {
+    margin: 20px;
     width: 250px;
-    height: 380px;
+    height: 400px;
 }
 
 .container-imagem {
@@ -64,3 +65,30 @@ header .my-title {
     display: block;
 }
 
+.card-title {
+    font-size: 18px;
+    padding: 7px 0  ;
+}
+
+.card-text {
+    font-size: 14px;
+    text-align: justify;
+}
+
+.card-text span {
+    margin-left: 15px;
+}
+
+.card-span {
+    color: gray;
+}
+
+.card-button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgba(0, 199, 167, 0.6);
+    color: beige;
+    font-size: 20px bold;
+    border: none;
+    margin-top: 20px; 
+}
