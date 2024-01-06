@@ -8,6 +8,8 @@ header {
     color: beige;
     background-color: black;
     padding: 20px;
+    width: 100%;
+    height: 220px;
 }
 
 header .my-title {
@@ -38,31 +40,75 @@ header .my-title {
     font-size: 18px;
 }
 
-.container-mercado {
-    background-color: rgba(0, 199, 167, 0.3);
+.title-mercado {
+    font-size:48px;
+    padding: 10px 50px;
+}
+
+.title-esporte {
+    font-size:48px;
+    padding: 10px 50px;
+}
+
+.title-geek {
+    font-size:48px;
+    padding: 10px 50px;
+}
+
+.title-crypto {
+    font-size:48px;
+    padding: 10px 50px;
+}
+
+.container-global {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container-mercado {
+    background-color: rgba(0, 199, 167, 0.3);
     width: 100%;
     height: 530px;
 }
 
 .container-esportes {
     background-color: rgba(255, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 530px;
 }
 
-.container-esportes .card-container {
+.container-geek {
+    background-color: rgba(255, 255, 0, 0.3);
+    width: 100%;
+    height: 530px;
+}
+
+.container-crypto {
+    background-color: rgba(0, 199, 167, 0.3);
+    width: 100%;
+    height: 530px;
+}
+
+.container-crypto .container-global .card-container {
     margin: 20px;
     width: 250px;
     height: 400px;
 }
 
-.container-mercado .card-container {
+.container-geek .container-global .card-container {
+    margin: 20px;
+    width: 250px;
+    height: 400px;
+}
+
+.container-esportes .container-global .card-container {
+    margin: 20px;
+    width: 250px;
+    height: 400px;
+}
+
+.container-mercado .container-global .card-container {
     margin: 20px;
     width: 250px;
     height: 400px;
