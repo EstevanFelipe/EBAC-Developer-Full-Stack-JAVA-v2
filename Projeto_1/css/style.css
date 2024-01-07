@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+header,
+section h2 {
+    font-family: 'Bugee', sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -16,7 +27,8 @@ header {
     color: #ecf0f1;
 }
 
-header .container {
+header .container,
+section .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,10 +37,41 @@ header .container {
 header nav li {
     display: inline;
     margin-left: 16px;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 header nav li a {
     color: #ecf0f1;
     text-decoration: none;
+}
+
+section .container {
+    align-items: flex-start;
+}
+
+section {
+    padding: 24px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+    color: #182c61;
+}
+
+section p {
+    margin: 8px 0;
+    text-align: justify;
+}
+
+.store-front {
+    margin-right: 32px;
+}
+
+.brands-list img {
+    height: 24px;
+}
+
+.brands-list li {
+    display: inline;
+    margin-right: 8px;
 }
