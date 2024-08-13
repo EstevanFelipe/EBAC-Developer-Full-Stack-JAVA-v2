@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+     <link rel="stylesheet" href="./style.css">
+
+     <!-- Inputmask JS -->
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/inputmask.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Cadastro</h2>
+        <form id="cadastroForm">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome e Sobrenome" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="nome@gmail.com" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="tel" class="form-control" id="telefone" placeholder="(00)00000-0000" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+        <!-- Tabela de Dados Cadastrados -->
+        <div class="mt-5" id="div-cadastros">
+            <h3 class="text-center">Dados Cadastrados</h3>
+            <table class="table table-bordered table-striped mt-3" id="dadosTabela" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+                <tbody id="dadosTabelaCorpo">
+                    <!-- Dados serão inseridos aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle (inclui Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+         // Aplicar máscara ao campo de nome
+         Inputmask({
+            regex: "^[A-Za-zÀ-ÖØ-öø-ÿ\\s]+$", // Permitir apenas letras e espaços
+            placeholder: "Nome"
+        }).mask(document.getElementById('nome'));
+
+        // Aplicar máscara ao campo de e-mail
+        Inputmask({
+            alias: "email", // Máscara específica para e-mails
+            placeholder: "exemplo@dominio.com"
+        }).mask(document.getElementById('email'));
+
+        // Aplicar máscara ao campo de telefone
+        Inputmask({
+            mask: "(99) 99999-9999"
+        }).mask(document.getElementById('telefone'));
+
+        // Captura o formulário
+        const form = document.getElementById('cadastroForm');
+
+        // Captura a tabela e o corpo da tabela
+        const tabela = document.getElementById('dadosTabela');
+        const tabelaCorpo = document.getElementById('dadosTabelaCorpo');
+
+        // Adiciona um evento de submissão ao formulário
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+
+            // Captura os valores dos campos do formulário
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+
+            // Cria uma nova linha na tabela
+            const novaLinha = document.createElement('tr');
+
+            // Cria as células e insere os dados
+            novaLinha.innerHTML = `
+                <td>${nome}</td>
+                <td>${email}</td>
+                <td>${telefone}</td>
+            `;
+
+            // Adiciona a nova linha ao corpo da tabela
+            tabelaCorpo.appendChild(novaLinha);
+
+            // Torna a tabela visível
+            tabela.style.display = 'table';
+
+            // Limpa os campos do formulário
+            form.reset();
+        });
+    </script>
+</body>
+</html>
