@@ -1,0 +1,15 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "Exercicio do Modulo 15 do Curso Full Stack Java.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss/main.scss build/main.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Estevan Felipe",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}
