@@ -1,0 +1,21 @@
+{
+
+  "name": "seu-projeto",
+  "version": "1.0.0",
+  "description": "Descrição do seu projeto",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build:sass": "gulp sass",
+    "build:imagemin": "gulp imagemin",
+    "build:uglify": "gulp uglify"
+  },
+    "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.79.5"
+  }
+}
